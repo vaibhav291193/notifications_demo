@@ -10,7 +10,9 @@ document.getElementById("errHeading").innerHTML = "";
 document.getElementById("formErrList").innerHTML = errors;
 document.getElementById("formErrors").tabindex = "-1";
 document.getElementById("formErrors").style.display = "none";
-document.getElementById("errParentDiv").style.display ="none";
+document.getElementById("errBorderDiv").style.display ="none";
+
+document.getElementById("imgContainer").style.display ="none";
 
 var i;
 var petNameErrorNode = document.getElementsByClassName("petNameError");
@@ -33,7 +35,7 @@ for( i = 0; i < petNameErrorNode.length ; i++ ) {
 }
 }
 if(!petTypeValidation(petType)) {
-errors = errors + "<li><a href=#petType>You must select and option.</a></li>";
+errors = errors + "<li><a href=#petType>You must select an option.</a></li>";
 for( i = 0; i < petTypeErrorNode.length ; i++ ) {
  petTypeErrorNode[i].style.display = "";
 }
@@ -47,10 +49,11 @@ for( i = 0; i < confirmErrorNode.length ; i++ ) {
 if(errors != "") {
 document.getElementById("errHeading").innerHTML = "The form contains errors:";
 document.getElementById("formErrList").innerHTML = errors;
-document.getElementById("formErrors").style.display = "";
+document.getElementById("formErrors").style.display = "block";
 document.getElementById("formErrors").tabindex = "0";
 document.getElementById("formErrors").focus();
-document.getElementById("errParentDiv").style.display = "";
+document.getElementById("errBorderDiv").style.display = "";
+document.getElementById("imgContainer").style.display ="";
 return false;
 }
 return true;
