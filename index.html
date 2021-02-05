@@ -7,6 +7,7 @@
     <title>Notifications Style 1</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="formStyle.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 <script src="formValidationOne.js"></script> 
 </head>
   <body>
@@ -20,12 +21,12 @@
 
 <form name="petForm" aria-labelledby="mainHeading" action="thankyou.html" onSubmit="return formValidation();" novalidate>
 <div class="col-md-6 row" id="errDivMain"  >
-<div class="col-md-1 row errorDiv" id="errBorderDiv" style="display:none;">
-<hr id="errBorder" role="none" >
+<div class="col-md-1 row " id="errBorderDiv" style="display:none;">
+<hr id="errBorder" role="none" align="right" noshade >
 </div>
 <div id="imgContainer" class="errorDiv col-md-2 row" style="text-align:center; position:relative; display:none;">
 <div>
-<img src="redalert.png" alt="" id="alertImg" style="position:absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); "/>
+<img src="redalert.svg" alt="" id="alertImg" style="position:absolute; top: 2.25em; left: 2.25em; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); "/>
 </div>
 </div>
 
@@ -39,20 +40,27 @@
 </div>  
 
 <div class="form-group">
+<div>
 <label for= "petName">Pet's Name</label>    
+</div>
 <div class="col-md-3 row">
 <input type="name" class="form-control" id= "petName" aria-describedby="petNameHintText petNameError" placeholder= "Enter your pet's name" required>
 </div>
+<div class="inlineMsg" >
 <span>
-    <img src="info.png" alt=""/><span id= "petNameHintText" " style="color:#0469c7;"> The pet’s name must be longer than 5 characters.</span>
+    <img src="info.svg" alt=""/><span id= "petNameHintText" " style="color:#0469c7;"> The pet’s name must be longer than 5 characters.</span>
 </span>
-<br/>
-<span id="petNameError" class="petNameError" style="display:none;"><img src="redalert.png" alt=""><span class="errText"> Error: The pet’s name is too short.</span></span>  
+</div>
+<div class="inlineMsg" >
+<span id="petNameError" class="petNameError" style="display:none;"><img src="redalert.svg" alt=""><span class="errText"> Error: The pet’s name is too short.</span></span>  
+</div>
 </div>
 <br role="none"/>
 
   <div class="form-group">
-    <label for="petType">Pet Type</label>
+<div>    
+<label for="petType">Pet Type</label>
+</div>
 <div class="col-md-3 row">
     
 <select class="form-control" id="petType" required aria-describedby="petTypeError">
@@ -63,8 +71,9 @@
       <option value="4">Goat</option>
     </select>
 </div>
-<span id="petTypeError" class="petTypeError" style="display:none;" ><img src="redalert.png" alt=""><span class="errText"> Error: You must select an option.</span></span>  
-  
+<div class="inlineMsg" >
+<span id="petTypeError" class="petTypeError" style="display:none;" ><img src="redalert.svg" alt=""><span class="errText"> Error: You must select an option.</span></span>  
+  </div>
   </div>
 <br role="none"/>
   <div class="form-check">
@@ -72,8 +81,8 @@
     <input type="checkbox" class="form-check-input" id="confirm" aria-describedby="confirmError" required>
 I confirm that the details submitted are correct to the best of my knowledge.</label>
 </div>
-<div >
-<span id="confirmError" class="confirmError" style="display:none;"><img src="redalert.png" alt=""><span class="errText"> Error: You must confirm your pet’s information.</span></span>  
+<div class="inlineMsg" >
+<span id="confirmError" class="confirmError" style="display:none;"><img src="redalert.svg" alt=""><span class="errText"> Error: You must confirm your pet’s information.</span></span>  
 </div>
 <br role="none"/>
 
