@@ -2,16 +2,7 @@ body {
 font-family: Roboto;
 }
 
-li > a{ text-decoration: none;
-}
-
-li > a:hover {
-text-decoration: underline;
-}
-
-li > a:focus {
-text-decoration: underline;
-}
+a { color: #0469c7;}
 
 li {
 padding-top: 0.5em;
